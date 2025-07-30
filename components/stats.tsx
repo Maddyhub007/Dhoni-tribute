@@ -56,7 +56,7 @@ export default function Stats() {
 
         {/* Stats Cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
-          <Card className={`bg-gradient-to-br ${formatColors[activeFormat]} border-orange-500/20 text-white`}>
+          <Card className={`bg-gradient-to-br ${formatColors[activeFormat]} border-orange-500 text-white`}>
             <CardHeader className="pb-3">
               <CardTitle className="text-sm font-medium text-blue-100">Matches</CardTitle>
             </CardHeader>
@@ -65,7 +65,7 @@ export default function Stats() {
             </CardContent>
           </Card>
 
-          <Card className={`bg-gradient-to-br ${formatColors[activeFormat]} border-orange-500/20 text-white`}>
+          <Card className={`bg-gradient-to-br ${formatColors[activeFormat]} border-orange-500 text-white`}>
             <CardHeader className="pb-3">
               <CardTitle className="text-sm font-medium text-blue-100">Runs</CardTitle>
             </CardHeader>
@@ -74,7 +74,7 @@ export default function Stats() {
             </CardContent>
           </Card>
 
-          <Card className={`bg-gradient-to-br ${formatColors[activeFormat]} border-orange-500/20 text-white`}>
+          <Card className={`bg-gradient-to-br ${formatColors[activeFormat]} border-orange-500 text-white`}>
             <CardHeader className="pb-3">
               <CardTitle className="text-sm font-medium text-blue-100">Average</CardTitle>
             </CardHeader>
@@ -83,7 +83,7 @@ export default function Stats() {
             </CardContent>
           </Card>
 
-          <Card className={`bg-gradient-to-br ${formatColors[activeFormat]} border-orange-500/20 text-white`}>
+          <Card className={`bg-gradient-to-br ${formatColors[activeFormat]} border-orange-500 text-white`}>
             <CardHeader className="pb-3">
               <CardTitle className="text-sm font-medium text-blue-100">Centuries</CardTitle>
             </CardHeader>
@@ -92,7 +92,7 @@ export default function Stats() {
             </CardContent>
           </Card>
 
-          <Card className={`bg-gradient-to-br ${formatColors[activeFormat]} border-orange-500/20 text-white`}>
+          <Card className={`bg-gradient-to-br ${formatColors[activeFormat]} border-orange-500 text-white`}>
             <CardHeader className="pb-3">
               <CardTitle className="text-sm font-medium text-blue-100">Fifties</CardTitle>
             </CardHeader>
@@ -104,7 +104,7 @@ export default function Stats() {
 
         {/* Captaincy Stats */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <Card className="bg-blue-800/40 backdrop-blur-sm border-orange-500/20">
+          <Card className="bg-blue-800/40 backdrop-blur-sm border-orange-500">
             <CardHeader className="pb-3">
               <div className="flex items-center space-x-2">
                 <Crown className="w-5 h-5 text-orange-400" />
@@ -117,7 +117,7 @@ export default function Stats() {
             </CardContent>
           </Card>
 
-          <Card className="bg-blue-800/40 backdrop-blur-sm border-orange-500/20">
+          <Card className="bg-blue-800/40 backdrop-blur-sm border-orange-500">
             <CardHeader className="pb-3">
               <div className="flex items-center space-x-2">
                 <Trophy className="w-5 h-5 text-orange-400" />
@@ -130,7 +130,7 @@ export default function Stats() {
             </CardContent>
           </Card>
 
-          <Card className="bg-blue-800/40 backdrop-blur-sm border-orange-500/20">
+          <Card className="bg-blue-800/40 backdrop-blur-sm border-orange-500">
             <CardHeader className="pb-3">
               <div className="flex items-center space-x-2">
                 <Target className="w-5 h-5 text-orange-400" />
@@ -143,7 +143,7 @@ export default function Stats() {
             </CardContent>
           </Card>
 
-          <Card className="bg-blue-800/40 backdrop-blur-sm border-orange-500/20">
+          <Card className="bg-blue-800/40 backdrop-blur-sm border-orange-500">
             <CardHeader className="pb-3">
               <div className="flex items-center space-x-2">
                 <Award className="w-5 h-5 text-orange-400" />

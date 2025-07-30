@@ -67,7 +67,7 @@ export default function Quotes() {
 
         <div className="max-w-4xl mx-auto">
           {/* Main Quote Display */}
-          <Card className="bg-gradient-to-br from-blue-800/60 to-blue-900/60 backdrop-blur-sm border-orange-500/20 mb-8">
+          <Card className="bg-gradient-to-br from-blue-800/60 to-blue-900/60 backdrop-blur-sm border-orange-500 mb-8">
             <CardContent className="p-12 text-center">
               <Quote className="w-16 h-16 text-orange-400 mx-auto mb-6 opacity-50" />
 
@@ -121,7 +121,7 @@ export default function Quotes() {
 
           {/* Quote Categories */}
           <div className="grid md:grid-cols-3 gap-6">
-            <Card className="bg-blue-800/40 backdrop-blur-sm border-orange-500/20">
+            <Card className="bg-blue-800/40 backdrop-blur-sm border-orange-500">
               <CardContent className="p-6 text-center">
                 <Heart className="w-8 h-8 text-orange-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-white mb-2">On Leadership</h3>
@@ -131,7 +131,7 @@ export default function Quotes() {
               </CardContent>
             </Card>
 
-            <Card className="bg-blue-800/40 backdrop-blur-sm border-orange-500/20">
+            <Card className="bg-blue-800/40 backdrop-blur-sm border-orange-500">
               <CardContent className="p-6 text-center">
                 <Quote className="w-8 h-8 text-orange-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-white mb-2">On Cricket</h3>
@@ -141,7 +141,7 @@ export default function Quotes() {
               </CardContent>
             </Card>
 
-            <Card className="bg-blue-800/40 backdrop-blur-sm border-orange-500/20">
+            <Card className="bg-blue-800/40 backdrop-blur-sm border-orange-500">
               <CardContent className="p-6 text-center">
                 <RefreshCw className="w-8 h-8 text-orange-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-white mb-2">On Life</h3>

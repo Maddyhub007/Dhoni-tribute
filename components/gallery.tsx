@@ -1,16 +1,34 @@
 "use client"
 
-import { useState } from "react"
+import { useState , useEffect, useRef} from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { ChevronLeft, ChevronRight, Trophy, Zap, Heart, Crown, Star } from "lucide-react"
 import Image from "next/image"
+import { useSwipeable } from "react-swipeable"
 import ImageGalleryModal from "./image-gallery-modal"
+
+
 
 export default function Gallery() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [isModalOpen, setIsModalOpen] = useState(false)
+
+  const autoplayRef = useRef<NodeJS.Timeout | null>(null)
+
+useEffect(() => {
+  if (!isModalOpen) {
+    autoplayRef.current = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % galleryImages.length)
+    }, 5000) // Change image every 5 seconds
+  }
+
+  return () => {
+    if (autoplayRef.current) clearInterval(autoplayRef.current)
+  }
+}, [isModalOpen])
+
 
   const galleryImages = [
     {
@@ -86,6 +104,12 @@ export default function Gallery() {
     setCurrentImageIndex((prev) => (prev - 1 + galleryImages.length) % galleryImages.length)
   }
 
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: () => nextImage(),
+    onSwipedRight: () => prevImage(),
+    trackMouse: true,
+  })
+
   const getCategoryColor = (category: string) => {
     switch (category) {
       case "World Cup":
@@ -114,16 +138,16 @@ export default function Gallery() {
         </div>
 
         {/* Main Gallery Display */}
-        <div className="relative max-w-4xl mx-auto mb-8">
-          <Card className="bg-blue-800/40 backdrop-blur-sm border-orange-500/20 overflow-hidden">
+        <div className="relative max-w-4xl mx-auto mb-8" {...swipeHandlers}>
+          <Card className="bg-blue-800/40 backdrop-blur-sm border-orange-500 overflow-hidden">
             <CardContent className="p-0">
               <div className="relative cursor-pointer" onClick={() => setIsModalOpen(true)}>
                 <Image
                   src={galleryImages[currentImageIndex].src || "/placeholder.svg"}
                   alt={galleryImages[currentImageIndex].title}
                   width={800}
-                  height={500}
-                  className="w-full h-[500px] object-cover"
+                  height={1000}
+                  className="w-full h-[500px] object-fit "
                   onError={(e) => {
                     e.currentTarget.src =
                       "/placeholder.svg?height=500&width=800&text=" +
@@ -135,8 +159,11 @@ export default function Gallery() {
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white"
-                  onClick={prevImage}
+                  className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-orange-500 text-white"
+                  onClick={(e) => {
+                    e.stopPropagation()
+                    prevImage()
+                  }}
                 >
                   <ChevronLeft className="w-6 h-6" />
                 </Button>
@@ -144,8 +171,11 @@ export default function Gallery() {
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white"
-                  onClick={nextImage}
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-orange-500 text-white"
+                  onClick={(e) => {
+                    e.stopPropagation()
+                    nextImage()
+                  }}
                 >
                   <ChevronRight className="w-6 h-6" />
                 </Button>
@@ -169,10 +199,10 @@ export default function Gallery() {
         </div>
 
         {/* Thumbnail Navigation */}
-        <div className="flex justify-center space-x-4 overflow-x-auto pb-4">
+        <div className="flex justify-center space-x-4 overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-orange-400 scrollbar-track-blue-900">
           {galleryImages.map((image, index) => (
             <button
-              key={index}
+              key={`${image.src}-${index}`}
               className={`flex-shrink-0 relative rounded-lg overflow-hidden transition-all duration-300 ${
                 index === currentImageIndex
                   ? "ring-2 ring-orange-400 scale-105"

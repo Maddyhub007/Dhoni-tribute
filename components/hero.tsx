@@ -46,7 +46,7 @@ export default function Hero() {
             </div>
 
             {/* Rotating Quotes */}
-            <div className="bg-blue-800/30 backdrop-blur-sm rounded-lg p-6 border border-orange-500/20">
+            <div className="bg-blue-800/30 backdrop-blur-sm rounded-lg p-6 border border-orange-500">
               <p className="text-lg lg:text-xl text-white italic leading-relaxed">
                 "{dhoniData.quotes[currentQuoteIndex]}"
               </p>
@@ -64,17 +64,17 @@ export default function Hero() {
 
             {/* Quick Stats */}
             <div className="grid grid-cols-3 gap-4">
-              <div className="bg-blue-800/40 backdrop-blur-sm rounded-lg p-4 text-center border border-orange-500/20">
+              <div className="bg-blue-800/40 backdrop-blur-sm rounded-lg p-4 text-center border border-orange-500">
                 <Trophy className="w-8 h-8 text-orange-400 mx-auto mb-2" />
                 <div className="text-2xl font-bold text-white">3</div>
                 <div className="text-sm text-blue-200">World Cups</div>
               </div>
-              <div className="bg-blue-800/40 backdrop-blur-sm rounded-lg p-4 text-center border border-orange-500/20">
+              <div className="bg-blue-800/40 backdrop-blur-sm rounded-lg p-4 text-center border border-orange-500">
                 <Star className="w-8 h-8 text-orange-400 mx-auto mb-2" />
                 <div className="text-2xl font-bold text-white">183</div>
                 <div className="text-sm text-blue-200">Matches as Captain</div>
               </div>
-              <div className="bg-blue-800/40 backdrop-blur-sm rounded-lg p-4 text-center border border-orange-500/20">
+              <div className="bg-blue-800/40 backdrop-blur-sm rounded-lg p-4 text-center border border-orange-500">
                 <Heart className="w-8 h-8 text-orange-400 mx-auto mb-2" />
                 <div className="text-2xl font-bold text-white">∞</div>
                 <div className="text-sm text-blue-200">Love from Fans</div>
@@ -113,7 +113,7 @@ export default function Hero() {
                   alt="MS Dhoni - Captain Cool"
                   width={400}
                   height={400}
-                  className="rounded-full w-full h-full object-cover"
+                  className="rounded-full w-full h-full object-fit"
                   onError={(e) => {
                     e.currentTarget.src = "/placeholder.svg?height=400&width=400&text=MS+Dhoni+Portrait"
                   }}

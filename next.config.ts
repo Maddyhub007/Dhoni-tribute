@@ -18,6 +18,7 @@ const nextConfig = {
       "images.unsplash.com",
       "upload.wikimedia.org",
       "cdn.pixabay.com",
+      "www.teahub.io",
     ],
   },
 }

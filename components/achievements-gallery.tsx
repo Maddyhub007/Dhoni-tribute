@@ -7,7 +7,7 @@ import Image from "next/image"
 export default function AchievementsGallery() {
   const majorAchievements = [
     {
-      image: "https://images.news18.com/ibnlive/uploads/2022/09/inia-t20-world-cup-win.jpg?impolicy=website&width=0&height=0",
+      image: "https://www.teahub.io/photos/full/31-311359_m-s-dhoni-indian-cricketer-handsome-looks-hd.jpg",
       title: "T20 World Cup Winner",
       year: "2007",
       description: "First T20 World Cup triumph under young captain",
@@ -34,8 +34,8 @@ export default function AchievementsGallery() {
     <div className="grid md:grid-cols-3 gap-6 mb-12">
       {majorAchievements.map((achievement, index) => (
         <Card
-          key={index}
-          className="bg-gradient-to-br from-yellow-600/30 to-orange-600/30 backdrop-blur-sm border-orange-500/20 overflow-hidden group hover:scale-105 transition-transform duration-300"
+          key={`${achievement.image}-${index}`}
+          className="bg-gradient-to-br from-yellow-600/30 to-orange-600/30 backdrop-blur-sm border-orange-500 overflow-hidden group hover:scale-105 transition-transform duration-300"
         >
           <div className=" relative h-64">
             <Image

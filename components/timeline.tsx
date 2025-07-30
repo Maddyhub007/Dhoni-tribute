@@ -58,7 +58,7 @@ export default function Timeline() {
                 {/* Content Card */}
                 <div className="flex-1 max-w-lg">
                   <Card
-                    className={`bg-gradient-to-br ${getEventColor(item.event)} border-orange-500/20 cursor-pointer transition-all duration-300 hover:scale-105 ${
+                    className={`bg-gradient-to-br ${getEventColor(item.event)} border-orange-500 cursor-pointer transition-all duration-300 hover:scale-105 ${
                       selectedYear === item.year ? "ring-2 ring-orange-400" : ""
                     }`}
                     onClick={() => setSelectedYear(selectedYear === item.year ? null : item.year)}
@@ -97,7 +97,7 @@ export default function Timeline() {
 
         {/* Achievement Summary */}
         <div className="mt-16 text-center">
-          <Card className="bg-blue-800/40 backdrop-blur-sm border-orange-500/20 max-w-4xl mx-auto">
+          <Card className="bg-blue-800/40 backdrop-blur-sm border-orange-500 max-w-4xl mx-auto">
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold text-white mb-6">Career Highlights</h3>
               <div className="grid md:grid-cols-3 gap-6">

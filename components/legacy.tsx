@@ -66,7 +66,7 @@ export default function Legacy() {
           {legacyStats.map((stat, index) => (
             <Card
               key={index}
-              className="bg-gradient-to-br from-blue-800/60 to-blue-900/60 backdrop-blur-sm border-orange-500/20 text-center"
+              className="bg-gradient-to-br from-blue-800/60 to-blue-900/60 backdrop-blur-sm border-orange-500 text-center"
             >
               <CardContent className="p-8">
                 <div className="mb-4">{stat.icon}</div>
@@ -85,7 +85,7 @@ export default function Legacy() {
           </h3>
           <div className="grid md:grid-cols-2 gap-4">
             {dhoniData.achievements.map((achievement, index) => (
-              <Card key={index} className="bg-blue-800/40 backdrop-blur-sm border-orange-500/20">
+              <Card key={index} className="bg-blue-800/40 backdrop-blur-sm border-orange-500">
                 <CardContent className="p-4">
                   <div className="flex items-center space-x-3">
                     <Award className="w-5 h-5 text-orange-400 flex-shrink-0" />
@@ -106,7 +106,7 @@ export default function Legacy() {
             {achievements.map((record, index) => (
               <Card
                 key={index}
-                className="bg-gradient-to-r from-orange-600/20 to-blue-600/20 backdrop-blur-sm border-orange-500/20"
+                className="bg-gradient-to-r from-orange-600/20 to-blue-600/20 backdrop-blur-sm border-orange-500"
               >
                 <CardContent className="p-4">
                   <div className="flex items-center space-x-3">
@@ -131,7 +131,7 @@ export default function Legacy() {
             {dhoniData.captaincy.worldCups.map((cup, index) => (
               <Card
                 key={index}
-                className="bg-gradient-to-br from-yellow-600/30 to-orange-600/30 backdrop-blur-sm border-orange-500/20"
+                className="bg-gradient-to-br from-yellow-600/30 to-orange-600/30 backdrop-blur-sm border-orange-500"
               >
                 <CardHeader className="pb-3">
                   <div className="flex items-center justify-center">
@@ -148,7 +148,7 @@ export default function Legacy() {
         </div>
 
         {/* Final Tribute */}
-        <Card className="bg-gradient-to-br from-blue-800/60 to-orange-600/30 backdrop-blur-sm border-orange-500/20">
+        <Card className="bg-gradient-to-br from-blue-800/60 to-orange-600/30 backdrop-blur-sm border-orange-500">
           <CardContent className="p-12 text-center">
             <h3 className="text-3xl font-bold text-white mb-6">
               Thank You, <span className="text-orange-400">Captain Cool</span>

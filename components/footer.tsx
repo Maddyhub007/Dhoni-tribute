@@ -7,7 +7,7 @@ export default function Footer() {
   const { dhoniData } = useDhoni()
 
   return (
-    <footer className="bg-blue-900/80 backdrop-blur-sm border-t border-orange-500/20 py-12 px-4">
+    <footer className="bg-blue-900/80 backdrop-blur-sm border-t border-orange-500 py-12 px-4">
       <div className="container mx-auto">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Left Section */}
@@ -58,7 +58,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-orange-500/20 pt-8 text-center">
+        <div className="border-t border-orange-500 pt-8 text-center">
           <p className="text-blue-200 text-sm mb-4">
             "I have always believed that process is more important than results." - MS Dhoni
           </p>
