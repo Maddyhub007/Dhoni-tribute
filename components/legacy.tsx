@@ -154,10 +154,10 @@ export default function Legacy() {
               Thank You, <span className="text-orange-400">Captain Cool</span>
             </h3>
             <p className="text-xl text-blue-100 leading-relaxed max-w-4xl mx-auto mb-8">
-              From a small town in Ranchi to the pinnacle of world cricket, MS Dhoni's journey is a testament to hard
-              work, dedication, and unwavering belief. He didn't just win matches; he won hearts. He didn't just break
-              records; he broke barriers. His legacy will inspire generations of cricketers and fans who dare to dream
-              big.
+              From a small town in Ranchi to the pinnacle of world cricket, MS Dhoni&apos;s journey is a testament to
+              hard work, dedication, and unwavering belief. He didn&apos;t just win matches; he won hearts. He
+              didn&apos;t just break records; he broke barriers. His legacy will inspire generations of cricketers and
+              fans who dare to dream big.
             </p>
             <div className="flex items-center justify-center space-x-4 text-2xl">
               <span className="text-orange-400">🏏</span>

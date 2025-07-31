@@ -48,7 +48,7 @@ export default function Hero() {
             {/* Rotating Quotes */}
             <div className="bg-blue-800/30 backdrop-blur-sm rounded-lg p-6 border border-orange-500">
               <p className="text-lg lg:text-xl text-white italic leading-relaxed">
-                "{dhoniData.quotes[currentQuoteIndex]}"
+                 &ldquo;{dhoniData.quotes[currentQuoteIndex]}&rdquo;
               </p>
               <div className="flex justify-center mt-4 space-x-2">
                 {dhoniData.quotes.map((_, index) => (
@@ -102,7 +102,7 @@ export default function Hero() {
 
           {/* Right Content - Hero Image */}
           <div className="relative">
-            <div className="relative w-full max-w-lg mx-auto">
+            <div className="relative w-full max-w-lg mx-auto rounded-full">
               {/* Glowing background effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-orange-400/20 to-blue-400/20 rounded-full blur-3xl"></div>
 
@@ -113,7 +113,7 @@ export default function Hero() {
                   alt="MS Dhoni - Captain Cool"
                   width={400}
                   height={400}
-                  className="rounded-full w-full h-full object-fit"
+                  className="rounded-full w-full h-full object-cover"
                   onError={(e) => {
                     e.currentTarget.src = "/placeholder.svg?height=400&width=400&text=MS+Dhoni+Portrait"
                   }}

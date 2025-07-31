@@ -41,7 +41,7 @@ export default function Timeline() {
             Journey of a <span className="text-orange-400">Legend</span>
           </h2>
           <p className="text-xl text-blue-200 max-w-3xl mx-auto">
-            From a small-town boy to India's most successful captain - every milestone that shaped the legend
+            From a small-town boy to India&apos;s most successful captain - every milestone that shaped the legend
           </p>
         </div>
 
@@ -52,7 +52,7 @@ export default function Timeline() {
           <div className="space-y-12">
             {dhoniData.timeline.map((item, index) => (
               <div
-                key={item.year}
+                key={item.id}
                 className={`flex items-center ${index % 2 === 0 ? "flex-row" : "flex-row-reverse"} gap-8`}
               >
                 {/* Content Card */}

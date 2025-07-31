@@ -60,7 +60,7 @@ export default function Footer() {
         {/* Bottom Section */}
         <div className="border-t border-orange-500 pt-8 text-center">
           <p className="text-blue-200 text-sm mb-4">
-            "I have always believed that process is more important than results." - MS Dhoni
+            &ldquo;I have always believed that process is more important than results.&rdquo; - MS Dhoni
           </p>
           <div className="flex items-center justify-center space-x-2 text-sm text-blue-300">
             <span>Made with</span>

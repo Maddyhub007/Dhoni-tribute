@@ -19,7 +19,7 @@ interface DhoniData {
     ipl: { matches: number; runs: number; average: number; centuries: number; fifties: number }
   }
   achievements: string[]
-  timeline: Array<{ year: number; event: string; description: string }>
+  timeline: Array<{ id:number; year: number; event: string; description: string }>
   quotes: string[]
   captaincy: {
     odiWins: number
@@ -78,17 +78,17 @@ export const DhoniProvider: React.FC<{ children: React.ReactNode }> = ({ childre
       "5 IPL titles with Chennai Super Kings",
     ],
     timeline: [
-      { year: 2004, event: "International Debut", description: "Made ODI debut against Bangladesh" },
-      { year: 2005, event: "Test Debut", description: "Test debut against Sri Lanka in Chennai" },
-      { year: 2007, event: "T20 World Cup Victory", description: "Led India to first T20 World Cup triumph" },
-      { year: 2007, event: "ODI Captaincy", description: "Appointed as ODI captain" },
-      { year: 2008, event: "Test Captaincy", description: "Became Test captain" },
-      { year: 2011, event: "World Cup Glory", description: "Hit the winning six in World Cup final" },
-      { year: 2013, event: "Champions Trophy", description: "Won Champions Trophy in England" },
-      { year: 2014, event: "Test Retirement", description: "Retired from Test cricket" },
-      { year: 2017, event: "ODI/T20I Captaincy", description: "Stepped down as limited-overs captain" },
-      { year: 2019, event: "World Cup Semi-final", description: "Last World Cup appearance" },
-      { year: 2020, event: "International Retirement", description: "Retired from international cricket" },
+      { id: 1, year: 2004, event: "International Debut", description: "Made ODI debut against Bangladesh" },
+      { id: 2, year: 2005, event: "Test Debut", description: "Test debut against Sri Lanka in Chennai" },
+      { id: 3, year: 2007, event: "T20 World Cup Victory", description: "Led India to first T20 World Cup triumph" },
+      { id: 4, year: 2007, event: "ODI Captaincy", description: "Appointed as ODI captain" },
+      { id: 5, year: 2008, event: "Test Captaincy", description: "Became Test captain" },
+      { id: 6, year: 2011, event: "World Cup Glory", description: "Hit the winning six in World Cup final" },
+      { id: 7, year: 2013, event: "Champions Trophy", description: "Won Champions Trophy in England" },
+      { id: 8, year: 2014, event: "Test Retirement", description: "Retired from Test cricket" },
+      { id: 9, year: 2017, event: "ODI/T20I Captaincy", description: "Stepped down as limited-overs captain" },
+      { id: 10, year: 2019, event: "World Cup Semi-final", description: "Last World Cup appearance" },
+      { id: 11, year: 2020, event: "International Retirement", description: "Retired from international cricket" },
     ],
     quotes: [
       "I never allow myself to be pressured.",

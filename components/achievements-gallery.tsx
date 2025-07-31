@@ -26,7 +26,7 @@ export default function AchievementsGallery() {
       title: "2013 Champions Trophy Winner",
       year: "2013",
       description: "Completed the trophy treble in England",
-      badge: "OG Captain",
+      badge: "Goat Captain",
     },
   ]
 

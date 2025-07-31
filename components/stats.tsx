@@ -47,7 +47,7 @@ export default function Stats() {
                   ? "bg-orange-500 hover:bg-orange-600 text-white"
                   : "border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-blue-900"
               }`}
-              onClick={() => setActiveFormat(format as any)}
+              onClick={() => setActiveFormat(format as "odis" | "tests" | "t20is" | "ipl")}
             >
               {label}
             </Button>

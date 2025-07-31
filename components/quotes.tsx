@@ -75,7 +75,7 @@ export default function Quotes() {
                 className={`transition-all duration-300 ${isAnimating ? "opacity-0 transform scale-95" : "opacity-100 transform scale-100"}`}
               >
                 <blockquote className="text-2xl lg:text-3xl font-medium text-white leading-relaxed mb-6 italic">
-                  "{allQuotes[currentQuote]}"
+                   &ldquo;{allQuotes[currentQuote]}&rdquo;
                 </blockquote>
 
                 <div className="flex items-center justify-center space-x-2">
